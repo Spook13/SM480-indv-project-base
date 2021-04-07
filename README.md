@@ -1,16 +1,8 @@
-> ### Disclaimer
-> **By viewing this project, we assume the following:**
-> - You are enrolled in the SM480 class at Nossi College of Art in Nashville, Tennessee
-> - You have prior knowledge of:
->   - Git, NPM/Yarn, JavaScript, React (Component, Hooks), etc.
-> - You have all the necessary software to edit and run the project
->   - e.g. Code editor (VSCode, WebStorm, etc.), Node, NPM, etc.
-
 # Nossi College of Art - Social Media 480
 Professor: Grant Swertfeger \
 Term: Spring 2021 \
-Class: YOUR CLASS DAY & TIME \
-Student Name: YOUR NAME 
+Class: Wednesday 8am-12pm \
+Student Name: Alyssa Clark \
 
 > ### Instructions:
 > 1. Create a fork of the repo to your own GitHub account

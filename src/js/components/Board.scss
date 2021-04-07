@@ -1,0 +1,24 @@
+.container{
+    margin: 15px;
+    overflow: scroll; 
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    list-style-type: none;
+  }
+  
+  li {
+    height: 400px;
+    width: 300px;
+    background-color: #bfbfbf;
+    margin: 5px;
+  }
+  
+  img {
+    height: 400px;
+    width: 300px;
+    object-fit: fill;
+  }
