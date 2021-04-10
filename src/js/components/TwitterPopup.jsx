@@ -1,18 +1,28 @@
 import React, { useState } from 'react';
-import './Popup.scss';
-import PopupButton from './PopupButton'
+import './TwitterPopup.scss';
+import TweetInfo from './TweetInfo';
 
-function  Popup(props){
+function  TwitterPopup(props){
 
     if(!props.show) {
         return null;
     }
 
     return (
-        <div className="container" >
+        <div className="twitter-popup-container" >
             <div className="exit" onClick={props.hidePopUp}>
                 X
             </div>
+
+            <p>
+                Art Info
+            </p>
+
+            <div className="art-img">
+                <img src="" alt=""/>
+            </div>
+
+            <TweetInfo />
         </div>
     )
 }
@@ -26,4 +36,4 @@ function  Popup(props){
 //     hidePopUp: PropTypes.func,
 // }
  
-export default Popup;
+export default TwitterPopup;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './PopupButton.scss';
+import './TwitterPopupButton.scss';
 
-function  PopupButton(props){
+function  TwitterPopupButton(props){
     function popupClick(e) {
         ;
     }
@@ -14,4 +14,4 @@ function  PopupButton(props){
     )
 }
  
-export default PopupButton;
+export default TwitterPopupButton;
