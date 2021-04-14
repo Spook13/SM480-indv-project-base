@@ -4,13 +4,9 @@ import TweetInfo from './TweetInfo';
 
 function  TwitterPopup(props){
 
-    if(!props.show) {
-        return null;
-    }
-
     return (
         <div className="twitter-popup-container" >
-            <div className="exit" onClick={props.hidePopUp}>
+            <div className="exit">
                 X
             </div>
 

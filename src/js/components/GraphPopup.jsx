@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './GraphPopup.scss';
+import GraphInfo from './GraphInfo';
+
 
 function  GraphPopup(props){
 
@@ -10,6 +12,18 @@ function  GraphPopup(props){
     return (
         <div className="tweet-info-container" >
             <div>
+                
+            <div className="exit">
+                X
+            </div>
+
+            <p>
+                Graph Info
+            </p>
+
+            <div className="graph-container">
+                <GraphInfo />
+            </div>
                 
             </div>
         </div>
