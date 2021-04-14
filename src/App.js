@@ -13,7 +13,7 @@ function App(props) {
   const [tweets, SetTweets] = useState([]);
 
   useEffect(() => {
-    loadTweets("%23art"); 
+    loadTweets("#art"); 
   }, [])
 
   // Grabbing from twitter API

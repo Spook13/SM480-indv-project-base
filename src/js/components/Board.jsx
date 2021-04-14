@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './Board.scss';
-import { map } from "lodash";
+import { map, filter } from "lodash";
 
 import GraphButton from './GraphButton';
 import TweetButton from './TweetButton';
@@ -21,7 +21,8 @@ function  Board(props){
     }
 
     const renderTwitterCards = () => {
-        return map(props.tweetInfo, tweet => (
+        // Filters tweets to only have images
+        return map(filter(props.tweetInfo, item => !!item.images.length), tweet => (
                 <li key={tweet.id}>
                     <GraphButton
                         className="tweet-button"
@@ -39,8 +40,8 @@ function  Board(props){
 
                     <img 
                         className="board-img"
-                        src="" 
-                        alt=""
+                        src={tweet.images[0].url}
+                        alt={tweet.images[0].media_key}
                     />
                 </li>
         ));

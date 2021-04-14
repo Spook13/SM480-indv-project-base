@@ -15,8 +15,9 @@ async function searchTweets (req, res) {
     const params = {
         "query": req.query.query,
         "tweet.fields": "author_id,text,created_at,public_metrics,attachments", // Edit optional query parameters here
-        "expansions": "author_id",
+        "expansions": "author_id,attachments.media_keys",
         "user.fields": "profile_image_url",
+        "media.fields": "media_key,preview_image_url,type,url,width,height,public_metrics",
         "max_results": 100
     };
 
@@ -60,16 +61,22 @@ async function getTweetById (req, res) {
     }
 }
 
-function mapTweetUser(tweet, users) {
+function mapTweetUser(tweet, users, media) {
     return {
     ...tweet,
         user: _.find(users, user => user.id === tweet.author_id),
+        images: _.filter(media, item => {
+            if(tweet.attachments && tweet.attachments.media_keys) {
+                return tweet.attachments.media_keys.includes(item.media_key);
+            } 
+            return false;
+        })
     }
 }
 
 function mapTweetsToUsers(results) {
-    const { data, includes:{ users }} = results;
-    return _.map(data, tweet => mapTweetUser(tweet, users));
+    const { data, includes:{ users, media }} = results;
+    return _.map(data, tweet => mapTweetUser(tweet, users, media));
 }
 
 async function getRequest(endpointURL, params) {
