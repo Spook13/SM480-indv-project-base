@@ -6,13 +6,13 @@ function  TwitterPopup(props){
 
     return (
         <div className="twitter-popup-container" >
-            <div className="exit">
+            <div className="exit-tweet">
                 X
             </div>
 
             <p>
                 Art Info
-            </p>
+            </p> 
 
             <div className="art-img">
                 <img src="" alt=""/>

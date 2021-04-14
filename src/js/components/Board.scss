@@ -1,6 +1,4 @@
 .board-container{
-  background-color: #000;
-    margin: 15px;
     overflow: scroll; 
     width: 95vw;
 }
@@ -10,16 +8,24 @@ ul {
     flex-wrap: wrap;
     justify-content: start;
     list-style-type: none;
+    margin: 10px 25px;
   }
   
   li {
     height: 400px;
     width: 300px;
-    background-color: #bfbfbf;
-    margin: 5px;
+    background-color: #a97073;
   }
-  
-  img {
+
+  // .graph-button{
+  //   margin: 10px;
+  // }
+
+  // .tweet-button {
+  //   margin: 10px;
+  // }
+
+  .board-img {
     height: 400px;
     width: 300px;
     object-fit: fill;

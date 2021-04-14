@@ -5,7 +5,7 @@ import LineChart from './LineChart';
 function  GraphInfo(props){
 
     return (
-        <div className="tweet-info-container" >
+        <div className="graph-info-container" >
             <LineChart />
         </div>
     )

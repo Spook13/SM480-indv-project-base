@@ -1,11 +1,18 @@
 .twitter-popup-container{
-    background-color: #C4C4C4;
+    background-color: #a97073;
     width: 744px;
     height: 744px;
     margin: 50px auto;
     // position: absolute;
 }
-.exit {
+.exit-tweet{
+    font-size: 20px;
     font-weight: bold;
-    font-size: 50px;
+    margin: 20px;
+}
+
+.art-img{
+    height: 700px;
+    object-fit: fill;
+    width: 700px;
 }

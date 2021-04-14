@@ -5,12 +5,8 @@ import GraphInfo from './GraphInfo';
 
 function  GraphPopup(props){
 
-    if(!props.show) {
-        return null;
-    }
-
     return (
-        <div className="tweet-info-container" >
+        <div className="graph-popup-container" >
             <div>
                 
             <div className="exit">
@@ -21,7 +17,7 @@ function  GraphPopup(props){
                 Graph Info
             </p>
 
-            <div className="graph-container">
+            <div>
                 <GraphInfo />
             </div>
                 

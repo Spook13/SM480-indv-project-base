@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './Board.scss';
-import Button from './Button';
+
+import GraphButton from './GraphButton';
+import TweetButton from './TweetButton';
 import TwitterPopup from './TwitterPopup';
 import GraphPopup from './GraphPopup';
+
 
 
 function  Board(props){
@@ -17,18 +20,27 @@ function  Board(props){
     }
 
     return (
-        <div className="container" >
+        <div className="board-container" >
             <ul>
                 <li>
-                    <Button 
+                    <GraphButton
+                        className="tweet-button"
                         onClick={onButtonClick}
-                    />
-
-                    <Button 
-                        onClick={onButtonClick}
-                    />
-
+                    >     
                     <img src="" alt=""/>
+                    </GraphButton>  
+
+                    <TweetButton
+                        className="tweet-button"
+                        onClick={onButtonClick}
+                    >
+                    </TweetButton> 
+
+                    <img 
+                        className="board-img"
+                        src="" 
+                        alt=""
+                    />
                 </li>
             </ul>
             <TwitterPopup />
