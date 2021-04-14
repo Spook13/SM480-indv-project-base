@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import './Board.scss';
+import { map } from "lodash";
 
 import GraphButton from './GraphButton';
 import TweetButton from './TweetButton';
@@ -11,30 +12,30 @@ import GraphPopup from './GraphPopup';
 
 function  Board(props){
 
-    // const [showPopup, setShowPopup] = useState(false);
+    const [showPopup, setShowPopup] = useState(false);
 
-    const onButtonClick = (popupClick) => {
-        console.log("button clicked");
-        // setShowPopup(true);
+    const onButtonClick = (id) => {
+        console.log("button clicked", id);
+        setShowPopup(true);
         return;
     }
 
-    return (
-        <div className="board-container" >
-            <ul>
-                <li>
+    const renderTwitterCards = () => {
+        return map(props.tweetInfo, tweet => (
+                <li key={tweet.id}>
                     <GraphButton
                         className="tweet-button"
                         onClick={onButtonClick}
-                    >     
-                    <img src="" alt=""/>
-                    </GraphButton>  
+                        id={tweet.id}
+                    />  
 
                     <TweetButton
                         className="tweet-button"
                         onClick={onButtonClick}
-                    >
-                    </TweetButton> 
+                        id={tweet.id}
+                    /> 
+
+                    <p>{tweet.id}</p>
 
                     <img 
                         className="board-img"
@@ -42,6 +43,13 @@ function  Board(props){
                         alt=""
                     />
                 </li>
+        ));
+    }
+
+    return (
+        <div className="board-container" >
+            <ul>
+                {renderTwitterCards()}
             </ul>
             <TwitterPopup />
             <GraphPopup />

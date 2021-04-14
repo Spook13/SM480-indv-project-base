@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import ReactDOM from 'react-dom';
 import './GraphButton.scss';
 
+const GRAPH_ICON = require("../../images/graph-icon.png");
+
 
 function GraphButton(props){
 
@@ -17,8 +19,13 @@ function GraphButton(props){
         <button 
             className="circle"
             onClick={handleClick}
+            title="Show Graph"
         > 
-        
+        <img 
+          className="graph-icon-img"
+          src={GRAPH_ICON.default}
+          alt="Graph Icon"
+          />
         </button>
     )
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from "prop-types";
 import './GraphPopup.scss';
 import GraphInfo from './GraphInfo';
 
@@ -9,7 +10,7 @@ function  GraphPopup(props){
         <div className="graph-popup-container" >
             <div>
                 
-            <div className="exit">
+            <div className="exit-graph">
                 X
             </div>
 

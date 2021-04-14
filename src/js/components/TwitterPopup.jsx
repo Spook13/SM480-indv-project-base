@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PropTypes from "prop-types";
 import './TwitterPopup.scss';
 import TweetInfo from './TweetInfo';
 
@@ -23,13 +24,8 @@ function  TwitterPopup(props){
     )
 }
 
-// Adding this broke things
-// Popup.propTypes = {
-//     // eslint-disable-next-line no-undef
-//     show: PropTypes.bool,
-//     // for hiding pop up
-//     // eslint-disable-next-line no-undef
-//     hidePopUp: PropTypes.func,
-// }
+TwitterPopup.propTypes = {
+
+}
  
 export default TwitterPopup;
