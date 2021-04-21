@@ -1,13 +1,31 @@
 .graph-popup-container{
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.graph-info-container{
     background-color: #C4C4C4;
     width: 744px;
     height: 744px;
     margin: 50px auto;
-    // position: absolute;
 }
+
 .exit-graph {
     color: #564840;
     font-size: 20px;
     font-weight: bold;
     margin: 20px;
+}
+
+.graph-text{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
 }

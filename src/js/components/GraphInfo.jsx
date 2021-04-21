@@ -5,7 +5,7 @@ import LineChart from './LineChart';
 function  GraphInfo(props){
 
     return (
-        <div className="graph-info-container" >
+        <div className="graph-container" >
             <LineChart />
         </div>
     )

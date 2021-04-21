@@ -19,7 +19,7 @@ function GraphButton(props){
         <button 
             className="circle"
             onClick={handleClick}
-            title="Show Graph"
+            title="View graph info"
         > 
         <img 
           className="graph-icon-img"

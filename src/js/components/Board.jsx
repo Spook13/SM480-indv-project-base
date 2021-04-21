@@ -12,11 +12,19 @@ import GraphPopup from './GraphPopup';
 
 function  Board(props){
 
-    const [showPopup, setShowPopup] = useState(false);
+    const [showGraphPopup, setShowGraphPopup] = useState(false);
 
-    const onButtonClick = (id) => {
-        console.log("button clicked", id);
-        setShowPopup(true);
+    const [showTweetPopup, setShowTweetPopup] = useState(false);
+
+    const onGraphClick = (id) => {
+        console.log("Graph button clicked", id);
+        setShowGraphPopup(true);
+        return;
+    }
+
+    const onTweetClick = (id) => {
+        console.log("Tweet button clicked", id);
+        setShowTweetPopup(true);
         return;
     }
 
@@ -25,18 +33,14 @@ function  Board(props){
         return map(filter(props.tweetInfo, item => !!item.images.length), tweet => (
                 <li key={tweet.id}>
                     <GraphButton
-                        className="tweet-button"
-                        onClick={onButtonClick}
+                        onClick={onGraphClick}
                         id={tweet.id}
                     />  
 
                     <TweetButton
-                        className="tweet-button"
-                        onClick={onButtonClick}
+                        onClick={onTweetClick}
                         id={tweet.id}
                     /> 
-
-                    <p>{tweet.id}</p>
 
                     <img 
                         className="board-img"
@@ -52,8 +56,16 @@ function  Board(props){
             <ul>
                 {renderTwitterCards()}
             </ul>
-            <TwitterPopup />
-            <GraphPopup />
+            <TwitterPopup 
+                show={showTweetPopup}
+                hidePopUp={() => setShowTweetPopup(false)}
+                onClose={() => setShowTweetPopup(false)}
+            />
+            <GraphPopup 
+                show={showGraphPopup}
+                hidePopUp={() => setShowGraphPopup(false)}
+                onClose={() => setShowGraphPopup(false)}
+            />
 
 
             

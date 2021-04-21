@@ -15,12 +15,21 @@ ul {
     height: 400px;
     width: 300px;
     background-color: #a97073;
+    margin-right: 20px;
+    margin-bottom: 20px;
   }
 
   .board-img {
-    height: 400px;
-    width: 300px;
-    object-fit: fill;
+    display: block;
+    justify-content: center;
+    object-fit: cover;
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
   }
 
   
